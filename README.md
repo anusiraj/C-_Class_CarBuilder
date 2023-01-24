@@ -14,3 +14,7 @@ Use the following if you can or needed:
 - Override methods from Object class as needed
 - Construct a few car objects and test out in Program.cs
 - Remember the conventions: Put classes in different files (with property naming)
+
+## Run the program
+
+`dotnet run --project CarBuilder`
