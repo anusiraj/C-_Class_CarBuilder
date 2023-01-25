@@ -1,4 +1,4 @@
-# Design a class structure for cars
+# Design a class structure for car
 
 Think about the real life and imagine what the cars look like. That will help you get ideas into the code
 
