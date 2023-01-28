@@ -13,7 +13,13 @@ class HondaCity : Brezza //just to learn how inheritance in normal class works
   public void HtWt(){
     base.HeightWeight();
   }
-  public void Sound(){
+  public override void Sound(){
     Console.WriteLine("Sound: Brum brum brummmm");
+  }
+  public override void LongOrShortDrive(){
+    base.LongOrShortDrive();
+  }
+  public void AvailableByColor(string clr){
+    base.ColourAvailable(clr);
   }
 }

@@ -9,6 +9,7 @@ public class Brezza : Car
   public int Height { get; init; }
   public int Weight { get; init; }
   public Model[] Models { get; set; }
+  public Fuel fuel;
   public Brezza(string carName, string[] colors, string fuel, int height, int weight, Model[] model)
   {
     Name = carName;
@@ -22,11 +23,11 @@ public class Brezza : Car
   public void CarModel(Model[] availableModels)
   {
     Console.WriteLine(Name);
-    Console.WriteLine($"The car {this} is availble in {Colors[0]} color");
         foreach(var modells in availableModels){
         if(modells.CarName == Name)
             Console.WriteLine($"And {this} is {modells.Models} model");
     }
+    Console.WriteLine(fuel);
   }
   public override void HeightWeight()
   {
@@ -41,7 +42,7 @@ public class Brezza : Car
     Console.WriteLine();
 
   }
-  public void Sound(){
+  public override void Sound(){
     var ftype1 = (Fuel)0;
     var ftype2 = (Fuel)2;
     if(Fuel == ftype1.ToString() | Fuel == ftype2.ToString()){
@@ -49,10 +50,18 @@ public class Brezza : Car
     }
     else Console.WriteLine($"Since it is {Fuel}, Sound will be high");
 
-
   }
-  public override bool LongOrShortDrive()
+  public override void LongOrShortDrive()
   {
-    return true;
+    Console.WriteLine($"{this} is good for Long Drive");
+  }
+  public virtual void ColourAvailable(string clr){
+      var result = Array.Find(Colors, element => element == clr.ToUpper());
+      if(result == clr.ToUpper()){
+        Console.WriteLine($"Yes, {this} is available in {clr} colour");
+      }
+      else{
+        Console.WriteLine($"Sorry, {this} is not available in {clr} colour");
+      }
   }
 }

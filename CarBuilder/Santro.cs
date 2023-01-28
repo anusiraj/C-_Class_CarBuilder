@@ -1,4 +1,5 @@
-class Santro : Car{
+class Santro : Car
+{
     public override string Name{get; set;} = "Santro";
     public Santro(){
 
@@ -12,8 +13,8 @@ class Santro : Car{
     throw new NotImplementedException();
   }
   public void Sound(){}
-  public override bool LongOrShortDrive()
+  public override void LongOrShortDrive()
   {
-    throw new NotImplementedException();
+    Console.WriteLine($"{this} is good for Short Drive ");
   }
 }
